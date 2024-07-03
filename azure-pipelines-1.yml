@@ -48,7 +48,7 @@ jobs:
     displayName: 'Prepare analysis on SonarCloud'
     inputs:
       SonarCloud: SonarCloud
-      organization: houssemdellai
+      organization: wypiorsebastiandev
       projectKey: WebAppWithDatabaseDemo
   
   - task: DotNetCoreCLI@2
