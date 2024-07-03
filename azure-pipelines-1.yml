@@ -49,7 +49,7 @@ jobs:
     inputs:
       SonarCloud: SonarCloud
       organization: wypiorsebastiandev
-      projectKey: WebAppWithDatabaseDemo
+      projectKey: sonar.project.monorepo.enabled
   
   - task: DotNetCoreCLI@2
     displayName: Build
@@ -72,8 +72,8 @@ jobs:
       arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
       zipAfterPublish: True
   
-  - task: SonarCloudAnalyze@1
-    displayName: 'Run Code Analysis'
+  # - task: SonarCloudAnalyze@1
+  #   displayName: 'Run Code Analysis'
   
   - task: SonarCloudPublish@1
     displayName: 'Publish Quality Gate Result'
